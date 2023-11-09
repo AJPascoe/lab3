@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build Stage'){
             steps {
-                sh "ls"
+                sh "sh buildstage.sh"
             }
         }
         stage('Test stage'){
             steps {
-                sh "pwd"
+                sh "sh teststage.sh"
             }
         }
         stage('Deploy stage'){
             steps {
-                sh "echo hello!"
+                sh "sh deploystage.sh"
             }
         }
     }
